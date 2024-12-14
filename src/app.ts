@@ -14,7 +14,7 @@ app.use('', router);
 // express specific error handling middleware
 app.use(ErrorHandler.middleware);
 
-const APP_PORT = process.env.APP_PORT || 2999;
+const APP_PORT = process.env.APP_PORT;
 app.listen(APP_PORT, () => {
-    console.log(`TS node server is running on http://localhost:${APP_PORT}`);
+    console.log(`TS API Gateway service is running on http://localhost:${APP_PORT}`);
 });

@@ -1,11 +1,12 @@
 {
-  "name": "exercise_app",
+  "name": "gateway_service",
   "version": "1.0.0",
   "main": "dist/app.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node dist/app.js",
+    "build": "npx tsc",
     "dev": "concurrently \"npx tsc -w\" \"nodemon dist/app.js\""
   },
   "keywords": [],

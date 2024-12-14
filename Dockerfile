@@ -6,10 +6,13 @@ COPY package*.json ./
 
 COPY tsconfig.json ./
 
+COPY src ./src
+RUN mkdir -p ./dist
+
 RUN npm install
+RUN npm run build
 
-COPY . .
 
-EXPOSE 2999
+EXPOSE ${APP_GATEWAY_PORT}
 
 CMD ["npm", "start"]
